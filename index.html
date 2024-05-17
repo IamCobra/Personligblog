@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ikhvanovich's Personlige Dagbog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Ikhvanovich's Personlige Dagbog</h1>
+  </header>
+  <main>
+    <section id="new-entry">
+      <h2 class="infobesked">Hvad vil vi dele i dag?</h2>
+      <form id="entry-form">
+        <label for="entry-date">Dato:</label>
+        <input type="date" id="entry-date" maxlength="2">
+        <label for="entry-text">Status i samfundet:</label>
+        <textarea id="entry-text" rows="5" required></textarea>
+        <label for="entry-image">Tilføj billede:</label>
+        <input type="file" id="entry-image" accept="image/*">
+        <div class="button-container">
+          <button type="submit">Gem</button>
+        </div>
+      </form>
+    </section>
+    <section id="entries">
+      <h2>Mine tidligere posts</h2>
+      <div id="entry-list"></div>
+    </section>
+  </main>
+
+  <!-- Modal structure -->
+  <div id="entry-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3 id="modal-date"></h3>
+      <p id="modal-text"></p>
+      <img id="modal-image" src="" alt="">
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
